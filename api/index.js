@@ -22,11 +22,12 @@ export default async function handler(req, res) {
               font-family: Arial, sans-serif;
               margin: 0;
               padding: 20px;
-              background-color: #f4f4f4;
+              background-color: #000;
+              color: #fff;
             }
             h1 {
               text-align: center;
-              color: #333;
+              color: #fff;
             }
             .galeria {
               display: grid;
@@ -36,9 +37,9 @@ export default async function handler(req, res) {
             .galeria img {
               max-width: 100%;
               height: auto;
-              border: 2px solid #ccc;
+              border: 2px solid #555;
               border-radius: 5px;
-              box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+              box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
               transition: transform 0.3s ease;
             }
             .galeria img:hover {
@@ -49,16 +50,17 @@ export default async function handler(req, res) {
             }
             .imagem-nome {
               margin-top: 5px;
-              color: #555;
+              color: #ccc;
               font-size: 14px;
             }
           </style>
         </head>
         <body>
-          <h1>Galeria de Imagens</h1>
-          <div class="galeria">
+          <h1>Galeria De Imagens</h1>
+          <div class="Galeria">
       `;
 
+      // Loop pelos arquivos e gera o HTML para cada imagem
       imagens.forEach(imagem => {
         if (imagem.type === 'file') {
           const imageUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${folderPath}/${imagem.name}`;
