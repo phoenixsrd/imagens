@@ -80,10 +80,10 @@ export default async function handler(req, res) {
       res.setHeader('Content-Type', 'text/html');
       res.status(200).send(html);
     } else {
-      res.status(404).send('Imagens não encontradas.');
+      res.status(404).send('Imagens Não Encontradas.');
     }
   } catch (error) {
     console.error(error);
-    res.status(500).send('Erro ao buscar as imagens.');
+    res.status(500).send('Erro Ao Buscar As Imagens.');
   }
 }
